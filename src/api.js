@@ -1,5 +1,3 @@
-import "./events.js"
-
 
 export async function getData(city) {
     if (!city) {
@@ -20,11 +18,11 @@ export async function getData(city) {
         const result = await response.json()
 
         const weatherData = {
-            City: result.address,
-            Date: result.days[0].datetime,
-            Max: result.days[0].tempmax,
-            Min: result.days[0].tempmin,
-            PrecipetationType: result.days[0].preciptype[0]
+            city: result.address,
+            date: result.days[0].datetime,
+            max: result.days[0].tempmax,
+            min: result.days[0].tempmin,
+            precipetationType: result.days[0].preciptype[0].toUpperCase()
         }
 
         console.log(weatherData)

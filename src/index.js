@@ -1,2 +1,2 @@
-import { getData } from "./api.js";
+import "./events.js"
 
